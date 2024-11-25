@@ -1,11 +1,22 @@
-const iframeHosts = ["gpt.uio.no", "auth.dataporten.no"];
+const iframeHosts = [
+  "gpt.uio.no",
+  "dataporten.no",
+  "feide.no",
+  "microsoftonline.com",
+];
 chrome.runtime.onInstalled.addListener(() => {
   chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
 
   const RULE = {
     id: 1,
     condition: {
-      initiatorDomains: [chrome.runtime.id],
+      initiatorDomains: [
+        chrome.runtime.id,
+        "gpt.uio.no",
+        "dataporten.no",
+        "feide.no",
+        "microsoftonline.com",
+      ],
       requestDomains: iframeHosts,
       resourceTypes: ["sub_frame", "main_frame"],
     },
