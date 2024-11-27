@@ -18,7 +18,10 @@
     "*://*.uio.no/*",
     "*://*.dataporten.no/*",
     "*://*.feide.no/*",
-    "*://*.microsoftonline.com/*"
+    "*://*.microsoftonline.com/*",
+    "*://*.idporten.no/*",
+    "*://*.bankid.no/*",
+    "*://*.uhad.no/*"
   ],
   "background": { "service_worker": "serviceWorker.js" }
 }

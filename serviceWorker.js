@@ -3,6 +3,9 @@ const iframeHosts = [
   "dataporten.no",
   "feide.no",
   "microsoftonline.com",
+  "idporten.no",
+  "bankid.no",
+  "uhad.no"
 ];
 chrome.runtime.onInstalled.addListener(() => {
   chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
@@ -16,6 +19,9 @@ chrome.runtime.onInstalled.addListener(() => {
         "dataporten.no",
         "feide.no",
         "microsoftonline.com",
+        "idporten.no",
+        "bankid.no",
+        "uhad.no",
       ],
       requestDomains: iframeHosts,
       resourceTypes: ["sub_frame", "main_frame"],
